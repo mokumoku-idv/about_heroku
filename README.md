@@ -1,5 +1,7 @@
 # about_heroku
-Herokuについて
+paasの一種。プラグインが豊富で、無料枠もそれなりにある
+しょぼいものなら、結構無料の範囲でいける
+wantedlyはherokuでサービス運用してる
 
 ## dyno
 サーバみたいなもの
