@@ -38,10 +38,10 @@ Opening ancient-dawn-3677... done
 ```
 ## 複数人で開発する場合
 以下のページを参考に共有する必要があり
-```
-https://devcenter.heroku.com/articles/create-manage-org
-https://devcenter.heroku.com/articles/sharing
-```
+
+* https://devcenter.heroku.com/articles/create-manage-org
+* https://devcenter.heroku.com/articles/sharing
+
 
 
 ## cron
