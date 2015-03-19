@@ -47,6 +47,12 @@ Opening ancient-dawn-3677... done
 
 http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
 
+## herokuでステージング環境
+以下のページとか参考に試してみる
+
+http://gihyo.jp/dev/serial/01/heroku/0007
+
+
 ## cron
 * clockworkとHeroku Schedular
 * お金かかっちゃうから、テストは出来んなー。
