@@ -42,7 +42,10 @@ Opening ancient-dawn-3677... done
 * https://devcenter.heroku.com/articles/create-manage-org
 * https://devcenter.heroku.com/articles/sharing
 
+## ログイン認証
+ここを見るのが早そう
 
+http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
 
 ## cron
 * clockworkとHeroku Schedular
