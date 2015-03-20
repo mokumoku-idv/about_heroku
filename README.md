@@ -52,6 +52,35 @@ http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
 
 http://gihyo.jp/dev/serial/01/heroku/0007
 
+## コマンド幾つか
+
+* スケールする量の決定
+```
+heroku ps:scale web=1
+```
+上記は1dynoで動くよって証拠。２以上必要なら2dyno
+
+* 現在の状態を確認
+```
+heroku ps
+```
+
+* productionを開く
+```
+heroku open
+```
+
+* rake実行
+```
+heroku run rake db:migrate
+```
+
+## ユーザ管理の作成
+以下を見て、さっくり出来た。簡単
+* http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
+サインアップ機能は、URLを外から見れないようにしたいね。
+元から見れないんだけど。URL導線は消してしまおう
+
 
 ## cron
 * clockworkとHeroku Schedular
