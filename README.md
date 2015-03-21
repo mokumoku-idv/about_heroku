@@ -77,9 +77,67 @@ heroku run rake db:migrate
 
 ## ユーザ管理の作成
 以下を見て、さっくり出来た。簡単
+
 * http://ruby-rails.hatenadiary.com/entry/20140801/1406907000
 サインアップ機能は、URLを外から見れないようにしたいね。
 元から見れないんだけど。URL導線は消してしまおう
+
+## railsのrouteのresource
+ちょっとわかりにくいんだよね。以下を見たらちょっとわかった
+
+http://www.rubylife.jp/rails/routing/index5.html
+
+RestfulなURLを自動で生成してくれる仕組み
+以下のように書くと
+```
+resources :blogs
+```
+以下のURLを生成してくれる（実際の例とは違うけど、気にしないでください）
+```
+GET    'sample'     => 'books#index'
+GET    'sample/:id' => 'books#show'
+GET    'sample/new' => 'books#new'
+POST   'sample'     => 'books#create'
+GET    'sample/:id/edit' => 'books#edit'
+DELETE 'sample/:id' => 'books#destroy'
+PUT    'sample/:id' => 'books#update'
+```
+使えるルーティング（URL）は以下のコマンドで確認できる
+```
+% rake routes
+                  Prefix Verb   URI Pattern                     Controller#Action
+     csv_shot_urls_index GET    /csv_shot_urls/index(.:format)  csv_shot_urls#index
+    csv_shot_urls_upload GET    /csv_shot_urls/upload(.:format) csv_shot_urls#upload
+        new_user_session GET    /users/sign_in(.:format)        devise/sessions#new
+            user_session POST   /users/sign_in(.:format)        devise/sessions#create
+    destroy_user_session DELETE /users/sign_out(.:format)       devise/sessions#destroy
+           user_password POST   /users/password(.:format)       devise/passwords#create
+       new_user_password GET    /users/password/new(.:format)   devise/passwords#new
+      edit_user_password GET    /users/password/edit(.:format)  devise/passwords#edit
+                         PATCH  /users/password(.:format)       devise/passwords#update
+                         PUT    /users/password(.:format)       devise/passwords#update
+cancel_user_registration GET    /users/cancel(.:format)         devise/registrations#cancel
+       user_registration POST   /users(.:format)                devise/registrations#create
+   new_user_registration GET    /users/sign_up(.:format)        devise/registrations#new
+  edit_user_registration GET    /users/edit(.:format)           devise/registrations#edit
+                         PATCH  /users(.:format)                devise/registrations#update
+                         PUT    /users(.:format)                devise/registrations#update
+                         DELETE /users(.:format)                devise/registrations#destroy
+              home_index GET    /home/index(.:format)           home#index
+               home_show GET    /home/show(.:format)            home#show
+                 widgets GET    /widgets(.:format)              widgets#index
+                         POST   /widgets(.:format)              widgets#create
+              new_widget GET    /widgets/new(.:format)          widgets#new
+             edit_widget GET    /widgets/:id/edit(.:format)     widgets#edit
+                  widget GET    /widgets/:id(.:format)          widgets#show
+                         PATCH  /widgets/:id(.:format)          widgets#update
+                         PUT    /widgets/:id(.:format)          widgets#update
+                         DELETE /widgets/:id(.:format)          widgets#destroy
+                    root GET    /                               home#index
+    upload_csv_shot_urls POST   /csv_shot_urls/upload(.:format) csv_shot_urls#upload
+           csv_shot_urls GET    /csv_shot_urls(.:format)        csv_shot_urls#index
+```
+
 
 
 
