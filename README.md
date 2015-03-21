@@ -137,8 +137,30 @@ cancel_user_registration GET    /users/cancel(.:format)         devise/registrat
     upload_csv_shot_urls POST   /csv_shot_urls/upload(.:format) csv_shot_urls#upload
            csv_shot_urls GET    /csv_shot_urls(.:format)        csv_shot_urls#index
 ```
+## bootstrapの適用
+Gemfileに以下を追加して、bundle install
+```
+gem 'therubyracer' # javascript runtime。lessをコンパイルするために必要
+gem 'less-rails' # Railsでlessを使えるようにする。Bootstrapがlessで書かれているため
+gem 'twitter-bootstrap-rails' # Bootstrapの本体
+```
+
+ここまでで、サーバ再起動が必要
+
+その後以下のコマンドでインストール
+```
+rails g bootstrap:install
+```
+
+強制的にテーマ適用
+```
+rails g bootstrap:layout -f
+```
 
 
+### bootstrap reference
+* http://blog.scimpr.com/2012/08/25/rails%E3%81%ABtwitter-bootstrap%E3%82%92%E8%A8%AD%E5%AE%9A%E3%81%99%E3%82%8B%EF%BD%9Etwitter-bootstrap-rails/
+* http://ruby-rails.hatenadiary.com/entry/20140801/1406818800
 
 
 ## cron
