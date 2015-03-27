@@ -166,6 +166,10 @@ rails g bootstrap:layout -f
 ## cron
 * clockworkとHeroku Schedular
 * お金かかっちゃうから、テストは出来んなー。
+* 
+
+## zone apex
+ルートドメインのこと言ってるっぽい。全部理解したわけではないので、結構難しい
 
 ## 参考
 * いろいろ自分で説明するより、こっち見た方が早い
